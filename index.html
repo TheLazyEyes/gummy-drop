@@ -34,17 +34,17 @@
       // Start your game or perform any necessary actions after preloading
     });
   </script>
-  <style>
+ <style>
     body {
       margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      position: relative;
+      padding: 0; /* Added padding */
+      overflow: hidden; /* Prevent scrolling */
     }
 
     #gameCanvas {
+      display: block;
+      margin: 0 auto; /* Center the canvas horizontally */
+      max-width: 100%; /* Make canvas responsive */
       border: 10px solid black;
       background: url(assets/play_background.jpg) no-repeat center center;
       background-size: cover;
