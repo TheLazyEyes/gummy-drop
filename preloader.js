@@ -1,6 +1,26 @@
 // Date / Time: 2024-04-24/10:00
 // MZ 
 
+// Get the canvas element
+var canvas = document.getElementById('gameCanvas');
+var ctx = canvas.getContext('2d');
+
+// Set initial canvas dimensions
+var canvasWidth = 450;
+var canvasHeight = 775;
+canvas.width = canvasWidth;
+canvas.height = canvasHeight;
+
+// Function to update canvas dimensions based on window size
+function updateCanvasSize() {
+  canvasWidth = window.innerWidth;
+  canvasHeight = window.innerHeight;
+  canvas.width = canvasWidth;
+  canvas.height = canvasHeight;
+}
+
+// Update canvas size when the window is resized
+window.addEventListener('resize', updateCanvasSize);
 function Preloader() {
   var assetsLoaded = 0;
   var totalAssets = 0;
