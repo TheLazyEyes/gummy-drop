@@ -47,7 +47,7 @@ var immunityTimer = 0; // Remaining time for player immunity
 
 var backgroundMusic = new Audio("assets/game_music.mp3");
 backgroundMusic.loop = true;
-backgroundMusic.volume = 0.1;
+backgroundMusic.volume = 0.15;
 backgroundMusic.play();
 
 var goodItemSound = new Audio("assets/point_sound.mp3");
@@ -65,23 +65,23 @@ restartButton.style.top = "70%";
 restartButton.style.transform = "translate(-50%, -50%)";
 restartButton.style.width = "100px";
 restartButton.style.height = "40px";
-restartButton.style.backgroundColor = "black";
+restartButton.style.backgroundColor = "red";
 restartButton.style.color = "white";
 restartButton.style.border = "black";
-restartButton.style.borderRadius = "5px";
+restartButton.style.borderRadius = "3px";
 restartButton.style.zIndex = "9999";
 
 watchButton.innerText = "Join $GUMMY";
 watchButton.style.position = "absolute";
 watchButton.style.left = "50%";
-watchButton.style.top = "80%";
+watchButton.style.top = "75%";
 watchButton.style.transform = "translate(-50%, -50%)";
 watchButton.style.width = "100px";
 watchButton.style.height = "40px";
-watchButton.style.backgroundColor = "black";
+watchButton.style.backgroundColor = "red";
 watchButton.style.color = "white";
 watchButton.style.border = "black";
-watchButton.style.borderRadius = "5px";
+watchButton.style.borderRadius = "3px";
 watchButton.style.zIndex = "9999";
 
 
@@ -297,23 +297,23 @@ function update() {
   checkCollision();
 
   // Draw score
-  ctx.font = "24px Arial";
-  ctx.fillStyle = "orange";
+  ctx.font = "20px Courier New ";
+  ctx.fillStyle = "red";
   ctx.strokeStyle = "black"; // Set the outline color to black
   ctx.lineWidth = 2; // Set the outline width
-  ctx.strokeText("Score: " + Math.floor(score), 10, 30);
-  ctx.fillText("Score: " + Math.floor(score), 10, 30);
+  ctx.strokeText("Gummys: " + Math.floor(score), 10, 30);
+  ctx.fillText("Gummys: " + Math.floor(score), 10, 30);
   if(score <= 0) {
     score = 0; 
   }
 
   // Draw Speed
-  ctx.font = "24px Arial";
-  ctx.fillStyle = "yellow";
+  ctx.font = "24px Courier New ";
+  ctx.fillStyle = "red";
   ctx.strokeStyle = "black"; // Set the outline color to black
   ctx.lineWidth = 2; // Set the outline width
-  ctx.strokeText("SpeedX: " + Math.floor(itemSpeed), 180, 30);
-  ctx.fillText("SpeedX: " + Math.floor(itemSpeed), 180, 30);
+  ctx.strokeText("speed: " + Math.floor(itemSpeed), 180, 30);
+  ctx.fillText("speed: " + Math.floor(itemSpeed), 180, 30);
   if(score <= 0) {
     score = 0; 
   }
@@ -327,7 +327,7 @@ function update() {
 
  // Draw immunity timer
 if (isPlayerImmune) {
-    ctx.font = "24px Arial";
+    ctx.font = "24px Courier New ";
     ctx.fillStyle = "lightgreen";
     ctx.strokeStyle = "black"; // Set the outline color to black
     ctx.lineWidth = 2; // Set the outline width
